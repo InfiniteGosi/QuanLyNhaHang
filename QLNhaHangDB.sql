@@ -15,13 +15,6 @@ CREATE TABLE NhanVien
   PRIMARY KEY (maNhanVien)
 );
 
-CREATE TABLE ThucDon
-(
-  maThucDon VARCHAR(10) NOT NULL,
-  moTa NVARCHAR(200) NOT NULL,
-  PRIMARY KEY (maThucDon)
-);
-
 CREATE TABLE MonAn
 (
   maMonAn VARCHAR(10) NOT NULL,
@@ -35,8 +28,9 @@ CREATE TABLE Ban
   maBan VARCHAR(10) NOT NULL,
   hoTenKhach NVARCHAR(100) NOT NULL,
   soDienThoaiKhach VARCHAR(10) NOT NULL,
-  ngayDatBan DATE NOT NULL,
-  ngayNhanBan DATE NOT NULL,
+  ngayDatBan DATE,
+  ngayNhanBan DATE,
+  daCoKhachDat BIT NOT NULL,
   PRIMARY KEY (maBan)
 );
 
@@ -59,25 +53,14 @@ CREATE TABLE HangHoa
   PRIMARY KEY (maHangHoa)
 );
 
-CREATE TABLE ThucDon_MonAn
+CREATE TABLE Ban_MonAn
 (
-  maThucDon VARCHAR(10) NOT NULL,
+  maBan VARCHAR(10) NOT NULL,
   maMonAn VARCHAR(10) NOT NULL,
-  PRIMARY KEY (maThucDon, maMonAn),
-  FOREIGN KEY (maThucDon) REFERENCES ThucDon(maThucDon),
+  PRIMARY KEY (maBan, maMonAn),
+  FOREIGN KEY (maBan) REFERENCES Ban(maBan),
   FOREIGN KEY (maMonAn) REFERENCES MonAn(maMonAn)
 );
-
-CREATE TABLE ThucDon_Ban
-(
-  maThucDon VARCHAR(10) NOT NULL,
-  maBan VARCHAR(10) NOT NULL,
-  PRIMARY KEY (maThucDon, maBan),
-  FOREIGN KEY (maThucDon) REFERENCES ThucDon(maThucDon),
-  FOREIGN KEY (maBan) REFERENCES Ban(maBan)
-);
-
-
 
 
 -- Quyền 0 là lớn nhất của quản lý, quyền 1 là quyền của lễ tân, quyền 2 là quyền của đầu bếp.
@@ -101,35 +84,28 @@ select * from MonAn
 
 
 
-insert into ThucDon VALUES ('TD01', N'Khai Vị')
-insert into ThucDon VALUES ('TD02', N'Món chính')
-insert into ThucDon VALUES ('TD03', N'Tráng miệng')
-select * from ThucDon
+
+insert into Ban values('B01', 'Khang', '111111', '1/1/2024', '2/1/2024', 1)
+insert into Ban values('B02', '', '', NULL, NULL, 0)
+insert into Ban values('B03', '', '', NULL, NULL, 0)
+insert into Ban values('B04', '', '', NULL, NULL, 0)
+insert into Ban values('B05', '', '', NULL, NULL, 0)
+insert into Ban values('B06', '', '', NULL, NULL, 0)
+insert into Ban values('B07', '', '', NULL, NULL, 0)
+insert into Ban values('B08', '', '', NULL, NULL, 0)
+insert into Ban values('B09', '', '', NULL, NULL, 0)
+insert into Ban values('B10', '', '', NULL, NULL, 0)
+insert into Ban values('B11', '', '', NULL, NULL, 0)
+insert into Ban values('B12', '', '', NULL, NULL, 0)
+insert into Ban values('B13', '', '', NULL, NULL, 0)
+insert into Ban values('B14', '', '', NULL, NULL, 0)
+insert into Ban values('B15', '', '', NULL, NULL, 0)
+select * from Ban where daCoKhachDat = 0
 
 
--- Insert data into ThucDon_MonAn table
-INSERT INTO ThucDon_MonAn VALUES ('TD01', 'MA001');
-INSERT INTO ThucDon_MonAn VALUES ('TD01', 'MA002');
-INSERT INTO ThucDon_MonAn VALUES ('TD02', 'MA003');
-INSERT INTO ThucDon_MonAn VALUES ('TD02', 'MA004');
-INSERT INTO ThucDon_MonAn VALUES ('TD02', 'MA005');
-INSERT INTO ThucDon_MonAn VALUES ('TD02', 'MA006');
-INSERT INTO ThucDon_MonAn VALUES ('TD02', 'MA007');
-INSERT INTO ThucDon_MonAn VALUES ('TD02', 'MA008');
-INSERT INTO ThucDon_MonAn VALUES ('TD02', 'MA009');
-INSERT INTO ThucDon_MonAn VALUES ('TD02', 'MA010');
-INSERT INTO ThucDon_MonAn VALUES ('TD03', 'MA001');
-INSERT INTO ThucDon_MonAn VALUES ('TD03', 'MA002');
-INSERT INTO ThucDon_MonAn VALUES ('TD03', 'MA003');
-INSERT INTO ThucDon_MonAn VALUES ('TD03', 'MA004');
-INSERT INTO ThucDon_MonAn VALUES ('TD03', 'MA005');
-INSERT INTO ThucDon_MonAn VALUES ('TD03', 'MA006');
-INSERT INTO ThucDon_MonAn VALUES ('TD03', 'MA007');
-INSERT INTO ThucDon_MonAn VALUES ('TD03', 'MA008');
-INSERT INTO ThucDon_MonAn VALUES ('TD03', 'MA009');
-INSERT INTO ThucDon_MonAn VALUES ('TD03', 'MA010');
-select * from ThucDon_MonAn
-
-
-insert into Ban values('B01', 'Khang', '111111', '1/1/2024', '2/1/2024')
-select * from Ban
+insert into Ban_MonAn values('B01', 'MA010')
+insert into Ban_MonAn values('B01', 'MA001')
+insert into Ban_MonAn values('B01', 'MA002')
+insert into Ban_MonAn values('B01', 'MA003')
+insert into Ban_MonAn values('B01', 'MA004')
+select * from Ban_MonAn
