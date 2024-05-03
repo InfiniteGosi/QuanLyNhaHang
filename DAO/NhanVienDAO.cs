@@ -36,5 +36,10 @@ namespace DAO
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;
         }
+        public DataTable GetAllEmployee()
+        {
+            string query = "select * from NhanVien";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

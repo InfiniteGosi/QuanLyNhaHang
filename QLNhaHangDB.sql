@@ -92,7 +92,8 @@ CREATE TABLE NhanVien_HangHoa
 );
 
 
-
-insert into NhanVien values('QL01', '123', 0, N'Quản Lý', N'Nguyễn Văn B', 1)
+-- Quyền 0 là lớn nhất của quản lý, quyền 1 là quyền của lễ tân, quyền 2 là quyền của đầu bếp.
+insert into NhanVien values('QL01', '123', 0, N'Quản Lý', N'Nguyễn Văn A', 1)
+insert into NhanVien values('LT01', '123', 1, N'Lễ tân', N'Trần Thị B', 0)
+insert into NhanVien values('DB01', '123', 2, N'Đầu bếp', N'Nguyễn Thành C', 1)
 select * from NhanVien 
-

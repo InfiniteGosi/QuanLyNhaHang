@@ -40,5 +40,62 @@ namespace QuanLyNhaHang
             if (isClosed)
                 Application.Exit();
         }
+
+        private void BTN_nhanvien_Click(object sender, EventArgs e)
+        {
+            if (nhanVien.PhanQuyen == 0)
+            {
+                FormDanhSachNhanVien f = new FormDanhSachNhanVien(nhanVien); ;
+                f.ShowDialog();
+            }
+            else if (nhanVien.PhanQuyen == 1)
+            {
+                MessageBox.Show("Bạn không được quyền vào phần này!");
+                return;
+            }
+            else if (nhanVien.PhanQuyen == 2)
+            {
+                MessageBox.Show("Bạn không được quyền vào phần này!");
+                return;
+            }
+        }
+
+        private void BTN_thucdon_Click(object sender, EventArgs e)
+        {
+            if (nhanVien.PhanQuyen == 0)
+            {
+                FormDanhSachThucDon f = new FormDanhSachThucDon();
+                f.ShowDialog();
+            }
+            else if (nhanVien.PhanQuyen == 1)
+            {
+                MessageBox.Show("Bạn không được quyền vào phần này!");
+                return;
+            }
+            else if (nhanVien.PhanQuyen == 2)
+            {
+                FormDanhSachThucDon f = new FormDanhSachThucDon();
+                f.ShowDialog();
+            }
+        }
+
+        private void BTN_ban_Click(object sender, EventArgs e)
+        {
+            if (nhanVien.PhanQuyen == 0)
+            {
+                FormDanhSachBan f = new FormDanhSachBan();
+                f.ShowDialog();
+            }
+            else if (nhanVien.PhanQuyen == 1)
+            {
+                FormDanhSachBan f = new FormDanhSachBan();
+                f.ShowDialog();
+            }
+            else if (nhanVien.PhanQuyen == 2)
+            {
+                MessageBox.Show("Bạn không được quyền vào phần này!");
+                return;
+            }
+        }
     }
 }

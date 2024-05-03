@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormChiTietNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChiTietNhanVien.Designer.cs">
+      <DependentUpon>FormChiTietNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDanhSachBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhSachBan.Designer.cs">
+      <DependentUpon>FormDanhSachBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDanhSachNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhSachNhanVien.Designer.cs">
+      <DependentUpon>FormDanhSachNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDanhSachThucDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDanhSachThucDon.Designer.cs">
+      <DependentUpon>FormDanhSachThucDon.cs</DependentUpon>
     </Compile>
     <Compile Include="FormNhanVien.cs">
       <SubType>Form</SubType>
@@ -60,8 +84,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormChiTietNhanVien.resx">
+      <DependentUpon>FormChiTietNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhSachBan.resx">
+      <DependentUpon>FormDanhSachBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhSachNhanVien.resx">
+      <DependentUpon>FormDanhSachNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDanhSachThucDon.resx">
+      <DependentUpon>FormDanhSachThucDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhanVien.resx">
       <DependentUpon>FormNhanVien.cs</DependentUpon>
