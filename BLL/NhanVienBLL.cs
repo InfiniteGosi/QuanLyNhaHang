@@ -36,7 +36,7 @@ namespace BLL
             string chucVu = dt.Rows[0]["chucVu"].ToString();
             string hoTen = dt.Rows[0]["hoTen"].ToString();
             bool gioiTinh = (bool)dt.Rows[0]["gioiTinh"];
-            return new NhanVien(maNhanVien, matKhau, phanQuyen, chucVu, hoTen, gioiTinh);
+            return new NhanVien(maNhanVien, matKhau,phanQuyen, chucVu, hoTen, gioiTinh);
         }
         public List<NhanVien> GetAllEmployee()
         {
@@ -46,11 +46,12 @@ namespace BLL
             {
                 string maNhanVien = dt.Rows[i]["maNhanVien"].ToString();
                 string matKhau = dt.Rows[i]["matKhau"].ToString();
+                string matKhauAn = new string('*', matKhau.Length);
                 int phanQuyen = (int)dt.Rows[i]["phanQuyen"];
                 string chucVu = dt.Rows[i]["chucVu"].ToString();
                 string hoTen = dt.Rows[i]["hoTen"].ToString();
                 bool gioiTinh = (bool)dt.Rows[i]["gioiTinh"];
-                list.Add(new NhanVien(maNhanVien, matKhau, phanQuyen, chucVu, hoTen, gioiTinh));
+                list.Add(new NhanVien(maNhanVien, matKhauAn,phanQuyen, chucVu, hoTen, gioiTinh));
             }
             return list;
         }

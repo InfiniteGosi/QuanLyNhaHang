@@ -45,7 +45,7 @@ namespace QuanLyNhaHang
         {
             if (nhanVien.PhanQuyen == 0)
             {
-                FormDanhSachNhanVien f = new FormDanhSachNhanVien(nhanVien); ;
+                FormDanhSachNhanVien f = new FormDanhSachNhanVien(nhanVien, nhanVien.MaNhanVien); ;
                 f.ShowDialog();
             }
             else if (nhanVien.PhanQuyen == 1)
@@ -96,6 +96,12 @@ namespace QuanLyNhaHang
                 MessageBox.Show("Bạn không được quyền vào phần này!");
                 return;
             }
+        }
+
+        private void btnChangePass_Click(object sender, EventArgs e)
+        {
+            FormChangePass formChangePass = new FormChangePass(nhanVien.MaNhanVien);
+            formChangePass.ShowDialog();
         }
     }
 }

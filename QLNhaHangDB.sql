@@ -52,7 +52,6 @@ CREATE TABLE HangHoa
   donGia INT NOT NULL,
   PRIMARY KEY (maHangHoa)
 );
-
 CREATE TABLE Ban_MonAn
 (
   maBan VARCHAR(10) NOT NULL,
@@ -109,3 +108,72 @@ insert into Ban_MonAn values('B01', 'MA002')
 insert into Ban_MonAn values('B01', 'MA003')
 insert into Ban_MonAn values('B01', 'MA004')
 select * from Ban_MonAn
+
+--xoa nhan vien
+create proc deleteStaff
+@maNhanVien VARCHAR(10)
+as
+begin 
+delete from NhanVien where maNhanVien=@maNhanVien
+end
+exec deleteStaff 'QL01'
+--sua nhan vien
+create proc updateStaff
+@maNhanVien varchar(10),
+  @phanQuyen INT,
+  @chucVu NVARCHAR(20) ,
+  @hoTen NVARCHAR(100) ,
+  @gioiTinh BIT 
+as
+begin
+update NhanVien
+set  chucVu=@chucVu
+where maNhanVien=@maNhanVien
+update NhanVien
+set phanQuyen=@phanQuyen
+where maNhanVien=@maNhanVien
+update NhanVien
+set hoTen=@hoTen
+where maNhanVien=@maNhanVien
+update NhanVien
+set gioiTinh=@gioiTinh
+where maNhanVien=@maNhanVien
+end
+exec updateStaff 'LT01', 1, N'Lễ tân', N'Trần thị B', 0
+select * from NhanVien 
+
+--them nhan vien
+create proc addStaff
+@maNhanVien VARCHAR(10) ,
+  @matKhau VARCHAR(100) ,
+  @phanQuyen INT ,
+  @chucVu NVARCHAR(20) ,
+  @hoTen NVARCHAR(100) ,
+  @gioiTinh BIT 
+  as
+  begin
+  insert into NhanVien values(@maNhanVien, @matKhau, @phanQuyen, @chucVu, @hoTen, @gioiTinh)
+  end
+  exec addStaff 'QL01', '123', 0, N'Quản Lý', N'Nguyễn Văn A', 1
+--sửa mật khẩu
+drop proc resetPassWord
+create proc resetPassWord
+@maNhanVien varchar(10)
+as
+begin
+update NhanVien
+set  matKhau='1'
+where maNhanVien=@maNhanVien
+end
+drop proc changePassWord 
+-- đổi mật khẩu
+create proc changePassWord
+@maNhanVien varchar(10),
+  @matKhau VARCHAR(100) 
+as
+begin
+update NhanVien
+set  matKhau=@matKhau
+where maNhanVien=@maNhanVien
+end
+exec changePassWord 'DB02','124'
