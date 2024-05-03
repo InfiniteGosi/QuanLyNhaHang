@@ -16,5 +16,11 @@ namespace QuanLyNhaHang
         {
             InitializeComponent();
         }
+
+        private void BTN_datban_Click(object sender, EventArgs e)
+        {
+            FormDatBan f = new FormDatBan();
+            f.ShowDialog();
+        }
     }
 }
