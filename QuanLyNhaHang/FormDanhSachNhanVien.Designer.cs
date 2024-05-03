@@ -52,6 +52,7 @@
             this.BTN_themnv.TabIndex = 1;
             this.BTN_themnv.Text = "Thêm nhân viên";
             this.BTN_themnv.UseVisualStyleBackColor = true;
+            this.BTN_themnv.Click += new System.EventHandler(this.BTN_themnv_Click);
             // 
             // FormDanhSachNhanVien
             // 

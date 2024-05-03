@@ -41,5 +41,10 @@ namespace QuanLyNhaHang
                 f.ShowDialog();
             }
         }
+
+        private void BTN_themnv_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
