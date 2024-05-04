@@ -27,5 +27,10 @@ namespace DAO
             string query = "select * from Ban where daCoKhachDat = 1";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public bool AddTable(Dictionary<string, object> parameters)
+        {
+            int result = DataProvider.Instance.ExecuteStoredProcedure("SP_DatBan", parameters);
+            return result > 0;
+        }
     }
 }

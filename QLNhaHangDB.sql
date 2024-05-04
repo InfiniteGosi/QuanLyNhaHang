@@ -109,3 +109,22 @@ insert into Ban_MonAn values('B01', 'MA002')
 insert into Ban_MonAn values('B01', 'MA003')
 insert into Ban_MonAn values('B01', 'MA004')
 select * from Ban_MonAn
+go
+
+create proc SP_DatBan
+	@maBan VARCHAR(10),
+	@hoTenKhach NVARCHAR(100),
+	@soDienThoaiKhach VARCHAR(10),
+	@ngayDatBan DATE,
+	@ngayNhanBan DATE,
+	@daCoKhachDat BIT
+as
+begin
+	update Ban
+	set hoTenKhach = @hoTenKhach,
+		soDienThoaiKhach = @soDienThoaiKhach,
+		ngayDatBan = @ngayDatBan,
+		ngayNhanBan = @ngayNhanBan,
+		daCoKhachDat = @daCoKhachDat
+	where maBan = @maBan
+end
