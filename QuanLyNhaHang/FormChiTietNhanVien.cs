@@ -181,7 +181,7 @@ namespace QuanLyNhaHang
 
         private void btnResetPass_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(string.Format("Bạn có chắc Muốn Xóa Mã nhân viên {0} không", TXB_manv.Text), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show(string.Format("Bạn có chắc Muốn Đặt lại mật khẩu mã nhân viên {0} không", TXB_manv.Text), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 NhanVienDAO.Instance.ResetPassWord(TXB_manv.Text);
                 MessageBox.Show("Đặt lại mật khẩu thành công");
