@@ -86,9 +86,9 @@
             // BTN_dangnhap
             // 
             this.BTN_dangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_dangnhap.Location = new System.Drawing.Point(357, 358);
+            this.BTN_dangnhap.Location = new System.Drawing.Point(339, 358);
             this.BTN_dangnhap.Name = "BTN_dangnhap";
-            this.BTN_dangnhap.Size = new System.Drawing.Size(115, 67);
+            this.BTN_dangnhap.Size = new System.Drawing.Size(154, 67);
             this.BTN_dangnhap.TabIndex = 5;
             this.BTN_dangnhap.Text = "Đăng Nhập";
             this.BTN_dangnhap.UseVisualStyleBackColor = true;
