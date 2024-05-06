@@ -60,5 +60,13 @@ namespace QuanLyNhaHang
         {
             Application.Exit();
         }
+
+        private void BTN_show_Click(object sender, EventArgs e)
+        {
+            if (TXB_mk.UseSystemPasswordChar == false)
+                TXB_mk.UseSystemPasswordChar = true;
+            else
+                TXB_mk.UseSystemPasswordChar = false;
+        }
     }
 }

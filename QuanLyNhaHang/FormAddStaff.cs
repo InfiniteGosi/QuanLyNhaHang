@@ -160,6 +160,7 @@ namespace QuanLyNhaHang
                 AddEmployee(maNhanVien, matKhau, phanQuyen, chucVu, hoTen, getSex);
                 MessageBox.Show("Thêm thành công");
                 FormDanhSachNhanVien.DisplayDGV_nhanvien(); // load lai du lieu
+                Close();
             }
         }
         public void AddEmployee(string maNhanVien, string matKhau, int phanQuyen, string chucVu, string hoTen, int getSex)

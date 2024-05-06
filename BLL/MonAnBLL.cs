@@ -49,13 +49,6 @@ namespace BLL
             }
             return list;
         }
-        public MonAn GetMonAnById(string maMonAn)
-        {
-            DataTable dt = MonAnDAO.Instance.GetMonAnById(maMonAn);
-            string tenMonAn = dt.Rows[0]["tenMonAn"].ToString();
-            int gia = (int)dt.Rows[0]["gia"];
-            return new MonAn(maMonAn, tenMonAn, gia);
-        }
         public string AddMonAnOfBan(string maBan, List<MonAn> listMonAn)
         {
             if (MonAnDAO.Instance.AddMonAnOfBan(maBan, listMonAn))

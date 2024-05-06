@@ -50,6 +50,7 @@ namespace QuanLyNhaHang
                 {
                     NhanVienDAO.Instance.ChangePassWord(TXB_manv.Text,tbPass.Text);
                     MessageBox.Show("Đặt lại mật khẩu thành công");
+                    Close();
                 }
             }
         }
@@ -67,6 +68,22 @@ namespace QuanLyNhaHang
         private void tbPassConfirm_TextChanged(object sender, EventArgs e)
         {
             lbErrorPass.Visible = false;
+        }
+
+        private void BTN_show1_Click(object sender, EventArgs e)
+        {
+            if (tbPass.UseSystemPasswordChar == false)
+                tbPass.UseSystemPasswordChar = true;
+            else
+                tbPass.UseSystemPasswordChar = false;
+        }
+
+        private void BTN_show2_Click(object sender, EventArgs e)
+        {
+            if (tbPassConfirm.UseSystemPasswordChar == false)
+                tbPassConfirm.UseSystemPasswordChar = true;
+            else
+                tbPassConfirm.UseSystemPasswordChar = false;
         }
     }
 }

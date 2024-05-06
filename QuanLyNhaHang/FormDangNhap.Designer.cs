@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
             this.label1 = new System.Windows.Forms.Label();
             this.TXB_manv = new System.Windows.Forms.TextBox();
             this.TXB_mk = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.BTN_dangnhap = new System.Windows.Forms.Button();
+            this.BTN_show = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(258, 52);
+            this.label1.Location = new System.Drawing.Point(256, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 39);
+            this.label1.Size = new System.Drawing.Size(274, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản lý nhà hàng";
             // 
@@ -59,6 +61,7 @@
             this.TXB_mk.Name = "TXB_mk";
             this.TXB_mk.Size = new System.Drawing.Size(383, 22);
             this.TXB_mk.TabIndex = 2;
+            this.TXB_mk.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -82,19 +85,37 @@
             // 
             // BTN_dangnhap
             // 
+            this.BTN_dangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTN_dangnhap.Location = new System.Drawing.Point(357, 358);
             this.BTN_dangnhap.Name = "BTN_dangnhap";
-            this.BTN_dangnhap.Size = new System.Drawing.Size(115, 50);
+            this.BTN_dangnhap.Size = new System.Drawing.Size(115, 67);
             this.BTN_dangnhap.TabIndex = 5;
             this.BTN_dangnhap.Text = "Đăng Nhập";
             this.BTN_dangnhap.UseVisualStyleBackColor = true;
             this.BTN_dangnhap.Click += new System.EventHandler(this.BTN_dangnhap_Click);
+            // 
+            // BTN_show
+            // 
+            this.BTN_show.BackColor = System.Drawing.Color.LightGray;
+            this.BTN_show.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.BTN_show.FlatAppearance.BorderSize = 0;
+            this.BTN_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTN_show.Font = new System.Drawing.Font("Times New Roman", 7.8F);
+            this.BTN_show.Image = ((System.Drawing.Image)(resources.GetObject("BTN_show.Image")));
+            this.BTN_show.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.BTN_show.Location = new System.Drawing.Point(609, 274);
+            this.BTN_show.Name = "BTN_show";
+            this.BTN_show.Size = new System.Drawing.Size(41, 23);
+            this.BTN_show.TabIndex = 34;
+            this.BTN_show.UseVisualStyleBackColor = false;
+            this.BTN_show.Click += new System.EventHandler(this.BTN_show_Click);
             // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BTN_show);
             this.Controls.Add(this.BTN_dangnhap);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -118,5 +139,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BTN_dangnhap;
+        private System.Windows.Forms.Button BTN_show;
     }
 }

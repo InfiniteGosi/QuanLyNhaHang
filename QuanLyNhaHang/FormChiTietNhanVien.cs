@@ -130,8 +130,9 @@ namespace QuanLyNhaHang
             if (MessageBox.Show(string.Format("Bạn có chắc Muốn Sửa Mã nhân viên {0} không", TXB_manv.Text), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
                 NhanVienDAO.Instance.UpdateStaff(maNhanVien, phanQuyen, chucVu, hoTen, getSex);
-            MessageBox.Show("Sửa thành công");
-            FormDanhSachNhanVien.DisplayDGV_nhanvien();
+                MessageBox.Show("Sửa thành công");
+                FormDanhSachNhanVien.DisplayDGV_nhanvien();
+                Close();
             }
         }
         //lbErrorMaNhanVien.Visible = false; ẩn thông báo lỗi
@@ -148,8 +149,9 @@ namespace QuanLyNhaHang
                 if (MessageBox.Show(string.Format("Bạn có chắc Muốn Xóa Mã nhân viên {0} không",TXB_manv.Text), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
                     NhanVienDAO.Instance.DeleteStaff(TXB_manv.Text);
-                MessageBox.Show("Xóa thành công");
-                FormDanhSachNhanVien.DisplayDGV_nhanvien();
+                    MessageBox.Show("Xóa thành công");
+                    FormDanhSachNhanVien.DisplayDGV_nhanvien();
+                    Close();
                 }
             }
         }

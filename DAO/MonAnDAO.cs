@@ -31,11 +31,6 @@ namespace DAO
             string query = "select * from MonAn";
             return DataProvider.Instance.ExecuteQuery(query);
         }
-        public DataTable GetMonAnById(string maMonAn)
-        {
-            string query = $"select * from MonAn where maMonAn = '{maMonAn}'";
-            return DataProvider.Instance.ExecuteQuery(query);
-        }
         public bool AddMonAnOfBan(string maBan, List<MonAn> listMonAn)
         {
             bool error = false;
@@ -50,6 +45,27 @@ namespace DAO
         {
             string query = $"delete from Ban_MonAn where maBan = '{maBan}'";
             return DataProvider.Instance.ExecuteNonQuery(query) > 0;
+        }
+        public void InsertMonAn( string tenMonAn, int gia)
+        {
+            string query = $"exec insertMonAn N'{tenMonAn}' , {gia}";
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public void UpdateMonAn(int maMonAn, string tenMonAn, int gia)
+        {
+            string query = $"exec updateMonAn {maMonAn} , N'{tenMonAn}' , {gia}";
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public void DeleteMonAn(int maMonAn)
+        {
+            string query = $"exec deleteMonAn {maMonAn}";
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public DataTable GetListMonAnTiengViet() 
+        {
+            string query = "select  maMonAn as N'Mã món ăn' , tenMonAn as N'Tên món ăn' , gia as N'Giá' from MonAn \r\n ";
+
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }

@@ -40,6 +40,7 @@
             this.DGV_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_nhanvien.Location = new System.Drawing.Point(77, 73);
             this.DGV_nhanvien.Name = "DGV_nhanvien";
+            this.DGV_nhanvien.ReadOnly = true;
             this.DGV_nhanvien.RowHeadersWidth = 51;
             this.DGV_nhanvien.RowTemplate.Height = 24;
             this.DGV_nhanvien.Size = new System.Drawing.Size(927, 431);
@@ -48,9 +49,9 @@
             // 
             // BTN_themnv
             // 
-            this.BTN_themnv.Location = new System.Drawing.Point(815, 12);
+            this.BTN_themnv.Location = new System.Drawing.Point(822, 12);
             this.BTN_themnv.Name = "BTN_themnv";
-            this.BTN_themnv.Size = new System.Drawing.Size(114, 40);
+            this.BTN_themnv.Size = new System.Drawing.Size(129, 55);
             this.BTN_themnv.TabIndex = 1;
             this.BTN_themnv.Text = "Thêm nhân viên";
             this.BTN_themnv.UseVisualStyleBackColor = true;
@@ -64,6 +65,7 @@
             this.Controls.Add(this.BTN_themnv);
             this.Controls.Add(this.DGV_nhanvien);
             this.Name = "FormDanhSachNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDanhSachNhanVien";
             this.Load += new System.EventHandler(this.FormDanhSachNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_nhanvien)).EndInit();

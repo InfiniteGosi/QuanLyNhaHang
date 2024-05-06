@@ -58,6 +58,12 @@
     <Compile Include="FormChangePass.Designer.cs">
       <DependentUpon>FormChangePass.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChiTietMonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChiTietMonAn.Designer.cs">
+      <DependentUpon>FormChiTietMonAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChiTietNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +88,17 @@
     <Compile Include="FormDanhSachNhanVien.Designer.cs">
       <DependentUpon>FormDanhSachNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDanhSachThucDon.cs">
+    <Compile Include="FormDanhSachMonAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDanhSachThucDon.Designer.cs">
-      <DependentUpon>FormDanhSachThucDon.cs</DependentUpon>
+    <Compile Include="FormDanhSachMonAn.Designer.cs">
+      <DependentUpon>FormDanhSachMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemMonAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemMonAn.Designer.cs">
+      <DependentUpon>FormThemMonAn.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSuaBan.cs">
       <SubType>Form</SubType>
@@ -114,6 +126,9 @@
     <EmbeddedResource Include="FormChangePass.resx">
       <DependentUpon>FormChangePass.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChiTietMonAn.resx">
+      <DependentUpon>FormChiTietMonAn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormChiTietNhanVien.resx">
       <DependentUpon>FormChiTietNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,8 +141,11 @@
     <EmbeddedResource Include="FormDanhSachNhanVien.resx">
       <DependentUpon>FormDanhSachNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDanhSachThucDon.resx">
-      <DependentUpon>FormDanhSachThucDon.cs</DependentUpon>
+    <EmbeddedResource Include="FormDanhSachMonAn.resx">
+      <DependentUpon>FormDanhSachMonAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemMonAn.resx">
+      <DependentUpon>FormThemMonAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSuaBan.resx">
       <DependentUpon>FormSuaBan.cs</DependentUpon>

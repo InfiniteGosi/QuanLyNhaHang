@@ -64,7 +64,7 @@ namespace QuanLyNhaHang
         {
             if (nhanVien.PhanQuyen == 0)
             {
-                FormDanhSachThucDon f = new FormDanhSachThucDon();
+                FormDanhSachMonAn f = new FormDanhSachMonAn();
                 f.ShowDialog();
             }
             else if (nhanVien.PhanQuyen == 1)
@@ -74,7 +74,7 @@ namespace QuanLyNhaHang
             }
             else if (nhanVien.PhanQuyen == 2)
             {
-                FormDanhSachThucDon f = new FormDanhSachThucDon();
+                FormDanhSachMonAn f = new FormDanhSachMonAn();
                 f.ShowDialog();
             }
         }
