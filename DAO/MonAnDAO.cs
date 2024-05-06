@@ -49,5 +49,26 @@ namespace DAO
             }
             return error;
         }
+        public void InsertMonAn( string tenMonAn, int gia)
+        {
+            string query = $"exec insertMonAn N'{tenMonAn}' , {gia}";
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public void UpdateMonAn(int maMonAn, string tenMonAn, int gia)
+        {
+            string query = $"exec updateMonAn {maMonAn} , N'{tenMonAn}' , {gia}";
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public void DeleteMonAn(int maMonAn)
+        {
+            string query = $"exec deleteMonAn {maMonAn}";
+            DataProvider.Instance.ExecuteNonQuery(query);
+        }
+        public DataTable GetListMonAnTiengViet() 
+        {
+            string query = "select  maMonAn as N'Mã món ăn' , tenMonAn as N'Tên món ăn' , gia as N'Giá' from MonAn \r\n ";
+
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
     }
 }

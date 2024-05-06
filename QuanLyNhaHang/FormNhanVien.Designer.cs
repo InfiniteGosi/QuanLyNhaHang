@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnChangePass = new System.Windows.Forms.Button();
             this.BTN_ban = new System.Windows.Forms.Button();
-            this.BTN_thucdon = new System.Windows.Forms.Button();
+            this.BTN_monan = new System.Windows.Forms.Button();
             this.BTN_nhanvien = new System.Windows.Forms.Button();
             this.BTN_dangxuat = new System.Windows.Forms.Button();
             this.LB_xinchao = new System.Windows.Forms.Label();
-            this.btnChangePass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,13 +43,23 @@
             this.panel1.BackColor = System.Drawing.Color.Bisque;
             this.panel1.Controls.Add(this.btnChangePass);
             this.panel1.Controls.Add(this.BTN_ban);
-            this.panel1.Controls.Add(this.BTN_thucdon);
+            this.panel1.Controls.Add(this.BTN_monan);
             this.panel1.Controls.Add(this.BTN_nhanvien);
             this.panel1.Controls.Add(this.BTN_dangxuat);
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(178, 608);
             this.panel1.TabIndex = 0;
+            // 
+            // btnChangePass
+            // 
+            this.btnChangePass.Location = new System.Drawing.Point(0, 460);
+            this.btnChangePass.Name = "btnChangePass";
+            this.btnChangePass.Size = new System.Drawing.Size(175, 78);
+            this.btnChangePass.TabIndex = 1;
+            this.btnChangePass.Text = "Đổi mật khẩu";
+            this.btnChangePass.UseVisualStyleBackColor = true;
+            this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
             // BTN_ban
             // 
@@ -61,15 +71,15 @@
             this.BTN_ban.UseVisualStyleBackColor = true;
             this.BTN_ban.Click += new System.EventHandler(this.BTN_ban_Click);
             // 
-            // BTN_thucdon
+            // BTN_monan
             // 
-            this.BTN_thucdon.Location = new System.Drawing.Point(0, 196);
-            this.BTN_thucdon.Name = "BTN_thucdon";
-            this.BTN_thucdon.Size = new System.Drawing.Size(178, 92);
-            this.BTN_thucdon.TabIndex = 2;
-            this.BTN_thucdon.Text = "Danh sách thực đơn";
-            this.BTN_thucdon.UseVisualStyleBackColor = true;
-            this.BTN_thucdon.Click += new System.EventHandler(this.BTN_thucdon_Click);
+            this.BTN_monan.Location = new System.Drawing.Point(0, 196);
+            this.BTN_monan.Name = "BTN_monan";
+            this.BTN_monan.Size = new System.Drawing.Size(178, 92);
+            this.BTN_monan.TabIndex = 2;
+            this.BTN_monan.Text = "Danh sách món ăn";
+            this.BTN_monan.UseVisualStyleBackColor = true;
+            this.BTN_monan.Click += new System.EventHandler(this.BTN_thucdon_Click);
             // 
             // BTN_nhanvien
             // 
@@ -101,16 +111,6 @@
             this.LB_xinchao.TabIndex = 0;
             this.LB_xinchao.Text = "label1";
             // 
-            // btnChangePass
-            // 
-            this.btnChangePass.Location = new System.Drawing.Point(0, 460);
-            this.btnChangePass.Name = "btnChangePass";
-            this.btnChangePass.Size = new System.Drawing.Size(175, 78);
-            this.btnChangePass.TabIndex = 1;
-            this.btnChangePass.Text = "Đổi mật khẩu";
-            this.btnChangePass.UseVisualStyleBackColor = true;
-            this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
-            // 
             // FormNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -135,7 +135,7 @@
         private System.Windows.Forms.Label LB_xinchao;
         private System.Windows.Forms.Button BTN_dangxuat;
         private System.Windows.Forms.Button BTN_ban;
-        private System.Windows.Forms.Button BTN_thucdon;
+        private System.Windows.Forms.Button BTN_monan;
         private System.Windows.Forms.Button BTN_nhanvien;
         private System.Windows.Forms.Button btnChangePass;
     }

@@ -14,10 +14,10 @@ CREATE TABLE NhanVien
   gioiTinh BIT NOT NULL,
   PRIMARY KEY (maNhanVien)
 );
-
+drop table MonAn
 CREATE TABLE MonAn
 (
-  maMonAn VARCHAR(10) NOT NULL,
+  maMonAn int identity,
   tenMonAn NVARCHAR(100) NOT NULL,
   gia INT NOT NULL,
   PRIMARY KEY (maMonAn)
@@ -55,7 +55,7 @@ CREATE TABLE HangHoa
 CREATE TABLE Ban_MonAn (
     banMonAnID INT NOT NULL,
     maBan VARCHAR(10) NOT NULL,
-    maMonAn VARCHAR(10) NOT NULL,
+    maMonAn int NOT NULL,
 	PRIMARY KEY(banMonAnID, maBan, maMonAn),
     FOREIGN KEY (maBan) REFERENCES Ban(maBan),
     FOREIGN KEY (maMonAn) REFERENCES MonAn(maMonAn)
@@ -69,19 +69,17 @@ insert into NhanVien values('DB01', '123', 2, N'Đầu bếp', N'Nguyễn Thành
 select * from NhanVien 
 
 
-INSERT INTO MonAn VALUES ('M001', N'Rau câu dừa', 50000);
-INSERT INTO MonAn VALUES ('M002', N'Bánh flan', 600000);
-INSERT INTO MonAn VALUES ('M003', N'Cơm gà Hải Nam', 55000);
-INSERT INTO MonAn VALUES ('M004', N'Bún bò Huế', 450000);
-INSERT INTO MonAn VALUES ('M005', N'Sườn xào', 550000);
-INSERT INTO MonAn VALUES ('M006', N'Cua cà mau', 650000);
-INSERT INTO MonAn VALUES ('M007', N'Cua hoàng đế', 400000);
-INSERT INTO MonAn VALUES ('M008', N'Cá hồi hấp', 350000);
-INSERT INTO MonAn VALUES ('M009', N'Bít tết', 600000);
-INSERT INTO MonAn VALUES ('M010', N'Bò lá lốt', 700000);
+INSERT INTO MonAn VALUES ( N'Rau câu dừa', 50000);
+INSERT INTO MonAn VALUES ( N'Bánh flan', 600000);
+INSERT INTO MonAn VALUES ( N'Cơm gà Hải Nam', 55000);
+INSERT INTO MonAn VALUES ( N'Bún bò Huế', 450000);
+INSERT INTO MonAn VALUES (N'Sườn xào', 550000);
+INSERT INTO MonAn VALUES ( N'Cua cà mau', 650000);
+INSERT INTO MonAn VALUES ( N'Cua hoàng đế', 400000);
+INSERT INTO MonAn VALUES ( N'Cá hồi hấp', 350000);
+INSERT INTO MonAn VALUES (N'Bít tết', 600000);
+INSERT INTO MonAn VALUES ( N'Bò lá lốt', 700000);
 select * from MonAn
-
-
 
 
 insert into Ban values('B01', 'Khang', '111111', '1/1/2024', '2/1/2024', 1)
@@ -198,3 +196,33 @@ begin
 	where maBan = @maBan
 end
 go
+
+create proc updateMonAn
+	@maMonAn int,
+	@tenMonAn nvarchar(100),
+	@gia int
+as
+begin
+	update MonAn
+	set tenMonAn=@tenMonAn
+	where maMonAn=@maMonAn
+
+	update MonAn
+	set gia=@gia
+	where maMonAn=@maMonAn
+end
+
+create proc deleteMonAn
+	@maMonAn int
+as
+begin
+	delete MonAn where maMonAn=@maMonAn
+end
+
+create proc insertMonAn
+	@tenMonAn nvarchar(100),
+	@gia int
+	as
+begin
+	INSERT INTO MonAn VALUES (@tenMonAn , @gia );
+end
