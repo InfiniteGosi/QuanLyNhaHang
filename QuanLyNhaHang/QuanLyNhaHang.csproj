@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddStaff.Designer.cs">
+      <DependentUpon>FormAddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePass.Designer.cs">
+      <DependentUpon>FormChangePass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChiTietNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +88,12 @@
     <Compile Include="FormDanhSachThucDon.Designer.cs">
       <DependentUpon>FormDanhSachThucDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongTinBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongTinBan.Designer.cs">
+      <DependentUpon>FormThongTinBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDatBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +108,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAddStaff.resx">
+      <DependentUpon>FormAddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePass.resx">
+      <DependentUpon>FormChangePass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormChiTietNhanVien.resx">
       <DependentUpon>FormChiTietNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDanhSachThucDon.resx">
       <DependentUpon>FormDanhSachThucDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongTinBan.resx">
+      <DependentUpon>FormThongTinBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDatBan.resx">
       <DependentUpon>FormDatBan.cs</DependentUpon>
@@ -137,6 +164,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{befac289-234e-44c5-b08f-7c3605ecc2e7}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{D7BD5262-E978-46F8-B5C6-0F1949C9EC2A}</Project>
+      <Name>DAO</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO\DTO.csproj">
       <Project>{0c94a544-7d07-4cbb-a50d-801b99985b54}</Project>

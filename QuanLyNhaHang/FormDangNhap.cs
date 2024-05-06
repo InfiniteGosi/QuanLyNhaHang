@@ -50,7 +50,7 @@ namespace QuanLyNhaHang
             }
             else
             {
-                MessageBox.Show("Mật khẩu không tồn tại");
+                MessageBox.Show("Tài khoản không tồn tại");
                 return;
             }
         }

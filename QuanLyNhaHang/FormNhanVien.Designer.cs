@@ -34,12 +34,14 @@
             this.BTN_nhanvien = new System.Windows.Forms.Button();
             this.BTN_dangxuat = new System.Windows.Forms.Button();
             this.LB_xinchao = new System.Windows.Forms.Label();
+            this.btnChangePass = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Bisque;
+            this.panel1.Controls.Add(this.btnChangePass);
             this.panel1.Controls.Add(this.BTN_ban);
             this.panel1.Controls.Add(this.BTN_thucdon);
             this.panel1.Controls.Add(this.BTN_nhanvien);
@@ -99,6 +101,16 @@
             this.LB_xinchao.TabIndex = 0;
             this.LB_xinchao.Text = "label1";
             // 
+            // btnChangePass
+            // 
+            this.btnChangePass.Location = new System.Drawing.Point(0, 460);
+            this.btnChangePass.Name = "btnChangePass";
+            this.btnChangePass.Size = new System.Drawing.Size(175, 78);
+            this.btnChangePass.TabIndex = 1;
+            this.btnChangePass.Text = "Đổi mật khẩu";
+            this.btnChangePass.UseVisualStyleBackColor = true;
+            this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
+            // 
             // FormNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -125,5 +137,6 @@
         private System.Windows.Forms.Button BTN_ban;
         private System.Windows.Forms.Button BTN_thucdon;
         private System.Windows.Forms.Button BTN_nhanvien;
+        private System.Windows.Forms.Button btnChangePass;
     }
 }

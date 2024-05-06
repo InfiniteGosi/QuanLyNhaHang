@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DAO
 {
@@ -40,6 +41,28 @@ namespace DAO
         {
             string query = "select * from NhanVien";
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public void UpdateStaff(string maNhanVien,int phanQuyen, string chucVu,string hoTen, int getSext)
+        { //sua nhan vien
+            DataProvider.Instance.ExecuteNonQuery($"exec updateStaff {maNhanVien} , {phanQuyen} , N'{chucVu}' , N'{hoTen}' , {getSext}");
+        }
+        public void DeleteStaff(string maNhanVien)
+        { //sua nhan vien
+            DataProvider.Instance.ExecuteNonQuery($"exec deleteStaff {maNhanVien} ");
+        }
+        public void AddStaff(string maNhanVien, string matKhau, int phanQuyen, string chucVu, string hoTen, int getSext)
+        { //sua nhan vien
+            DataProvider.Instance.ExecuteNonQuery($"exec addStaff {maNhanVien} , {matKhau} , {phanQuyen} , N'{chucVu}' , N'{hoTen}' , {getSext}");
+        }
+        public void ResetPassWord(string maNhanVien)
+        {
+            DataProvider.Instance.ExecuteNonQuery($" exec resetPassWord  {maNhanVien} ");
+
+        }
+        public void ChangePassWord(string maNhanVien, string matKhau)
+        { //sua nhan vien
+            DataProvider.Instance.ExecuteNonQuery($"exec changePassWord {maNhanVien} , {matKhau} ");
         }
     }
 }

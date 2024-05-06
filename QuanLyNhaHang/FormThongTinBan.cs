@@ -12,11 +12,10 @@ using DTO;
 
 namespace QuanLyNhaHang
 {
-    public partial class FormDatBan : Form
+    public partial class FormThongTinBan : Form
     {
         FormDanhSachBan parent;
-        private List<MonAn> listMonAn = new List<MonAn>();
-        public FormDatBan(FormDanhSachBan parent)
+        public FormThongTinBan(FormDanhSachBan parent)
         {
             InitializeComponent();
             this.parent = parent;
@@ -60,9 +59,7 @@ namespace QuanLyNhaHang
         private void FormDatBan_Load(object sender, EventArgs e)
         {
             DisplayCBB_bantrongItems();
-            CBB_datmonan.DataSource = MonAnBLL.Instance.GetListMonAn();
         }
-        
 
         private void BTN_them_Click(object sender, EventArgs e)
         {
@@ -95,14 +92,6 @@ namespace QuanLyNhaHang
         private void TXB_sdtkhach_TextChanged(object sender, EventArgs e)
         {
             LB_esdtkhach.Visible = true;
-        }
-        private void BTN_themmonan_Click(object sender, EventArgs e)
-        {
-            listMonAn.Add(CBB_datmonan.SelectedItem as MonAn);
-            MonAnBLL.Instance.AddMonAnOfBan(CBB_mabantrong.SelectedItem.ToString(), CBB_datmonan.SelectedItem.ToString().Split('-')[0]);
-
-            DGV_monandadat.DataSource = null;
-            DGV_monandadat.DataSource = listMonAn;
         }
     }
 }

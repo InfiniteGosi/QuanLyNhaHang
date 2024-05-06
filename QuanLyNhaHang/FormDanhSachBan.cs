@@ -20,11 +20,10 @@ namespace QuanLyNhaHang
 
         private void BTN_datban_Click(object sender, EventArgs e)
         {
-            FormDatBan f = new FormDatBan();
-            f.Show();
-            Close();
+            FormDatBan f = new FormDatBan(this);
+            f.ShowDialog();
         }
-        private void DisplayDGV_ban()
+        public void DisplayDGV_ban()
         {
             DGV_ban.DataSource = BanBLL.Instance.GetOccupiedTables();
         }

@@ -35,6 +35,8 @@
             // 
             // DGV_nhanvien
             // 
+            this.DGV_nhanvien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGV_nhanvien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_nhanvien.Location = new System.Drawing.Point(77, 73);
             this.DGV_nhanvien.Name = "DGV_nhanvien";
@@ -52,6 +54,7 @@
             this.BTN_themnv.TabIndex = 1;
             this.BTN_themnv.Text = "Thêm nhân viên";
             this.BTN_themnv.UseVisualStyleBackColor = true;
+            this.BTN_themnv.Click += new System.EventHandler(this.BTN_themnv_Click);
             // 
             // FormDanhSachNhanVien
             // 
