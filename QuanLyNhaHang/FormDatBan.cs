@@ -60,6 +60,7 @@ namespace QuanLyNhaHang
         private void FormDatBan_Load(object sender, EventArgs e)
         {
             DisplayCBB_bantrongItems();
+            CBB_mabantrong.SelectedIndex = -1;
             CBB_datmonan.DataSource = MonAnBLL.Instance.GetListMonAn();
         }
         
@@ -67,6 +68,11 @@ namespace QuanLyNhaHang
         private void BTN_them_Click(object sender, EventArgs e)
         {
             int error = 0;
+            if (CBB_mabantrong.SelectedIndex == -1)
+            {
+                LB_emaban.Visible = true;
+                error++;
+            }
             if (string.IsNullOrEmpty(TXB_hotenkhach.Text))
             {
                 LB_ehotenkhach.Visible = true;
@@ -83,26 +89,30 @@ namespace QuanLyNhaHang
             }
             InitializeValues();
             MessageBox.Show(BanBLL.Instance.AddTables(AddParameter()));
+            MonAnBLL.Instance.AddMonAnOfBan(CBB_mabantrong.SelectedItem.ToString(), listMonAn);
             parent.DisplayDGV_ban();
             Close();
         }
 
         private void TXB_hotenkhach_TextChanged(object sender, EventArgs e)
         {
-            LB_ehotenkhach.Visible = true;
+            LB_ehotenkhach.Visible = false;
         }
 
         private void TXB_sdtkhach_TextChanged(object sender, EventArgs e)
         {
-            LB_esdtkhach.Visible = true;
+            LB_esdtkhach.Visible = false;
+        }
+        private void CBB_mabantrong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LB_emaban.Visible = false;
         }
         private void BTN_themmonan_Click(object sender, EventArgs e)
         {
             listMonAn.Add(CBB_datmonan.SelectedItem as MonAn);
-            MonAnBLL.Instance.AddMonAnOfBan(CBB_mabantrong.SelectedItem.ToString(), CBB_datmonan.SelectedItem.ToString().Split('-')[0]);
-
             DGV_monandadat.DataSource = null;
             DGV_monandadat.DataSource = listMonAn;
         }
+
     }
 }

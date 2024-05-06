@@ -109,6 +109,7 @@ insert into Ban_MonAn values(1, 'B02', 'M005')
 insert into Ban_MonAn values(2, 'B02', 'M005')
 select * from Ban_MonAn
 
+
 --xoa nhan vien
 create proc deleteStaff
 @maNhanVien VARCHAR(10)
@@ -196,3 +197,4 @@ begin
 		daCoKhachDat = @daCoKhachDat
 	where maBan = @maBan
 end
+go

@@ -47,6 +47,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.CBB_datmonan = new System.Windows.Forms.ComboBox();
             this.BTN_themmonan = new System.Windows.Forms.Button();
+            this.LB_emaban = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_monandadat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +58,7 @@
             this.CBB_mabantrong.Name = "CBB_mabantrong";
             this.CBB_mabantrong.Size = new System.Drawing.Size(198, 24);
             this.CBB_mabantrong.TabIndex = 0;
+            this.CBB_mabantrong.SelectedIndexChanged += new System.EventHandler(this.CBB_mabantrong_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -230,11 +232,24 @@
             this.BTN_themmonan.UseVisualStyleBackColor = true;
             this.BTN_themmonan.Click += new System.EventHandler(this.BTN_themmonan_Click);
             // 
+            // LB_emaban
+            // 
+            this.LB_emaban.AutoSize = true;
+            this.LB_emaban.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_emaban.ForeColor = System.Drawing.Color.Red;
+            this.LB_emaban.Location = new System.Drawing.Point(91, 152);
+            this.LB_emaban.Name = "LB_emaban";
+            this.LB_emaban.Size = new System.Drawing.Size(245, 20);
+            this.LB_emaban.TabIndex = 20;
+            this.LB_emaban.Text = "Vui lòng chọn mã bàn còn trống";
+            this.LB_emaban.Visible = false;
+            // 
             // FormDatBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1120, 664);
+            this.Controls.Add(this.LB_emaban);
             this.Controls.Add(this.BTN_themmonan);
             this.Controls.Add(this.CBB_datmonan);
             this.Controls.Add(this.label8);
@@ -285,5 +300,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox CBB_datmonan;
         private System.Windows.Forms.Button BTN_themmonan;
+        private System.Windows.Forms.Label LB_emaban;
     }
 }

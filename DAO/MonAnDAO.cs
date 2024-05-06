@@ -38,15 +38,16 @@ namespace DAO
         }
         public bool AddMonAnOfBan(string maBan, List<MonAn> listMonAn)
         {
+            bool error = false;
             for (int i = 1; i <= listMonAn.Count; i++)
             {
                 string query = $"insert into Ban_MonAn values('{i}', '{maBan}', '{listMonAn[i]}')";
                 if (DataProvider.Instance.ExecuteNonQuery(query) <= 0)
                 {
-                    return false;
+                    error = true;
                 }
             }
-            return true;
+            return error;
         }
     }
 }
