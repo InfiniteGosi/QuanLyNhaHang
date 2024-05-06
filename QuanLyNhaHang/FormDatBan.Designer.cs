@@ -144,7 +144,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(421, 23);
+            this.label6.Location = new System.Drawing.Point(414, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(225, 54);
             this.label6.TabIndex = 10;
@@ -189,10 +189,12 @@
             this.DGV_monandadat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_monandadat.Location = new System.Drawing.Point(556, 218);
             this.DGV_monandadat.Name = "DGV_monandadat";
+            this.DGV_monandadat.ReadOnly = true;
             this.DGV_monandadat.RowHeadersWidth = 51;
             this.DGV_monandadat.RowTemplate.Height = 24;
             this.DGV_monandadat.Size = new System.Drawing.Size(458, 327);
             this.DGV_monandadat.TabIndex = 15;
+            this.DGV_monandadat.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_monandadat_CellDoubleClick);
             // 
             // label7
             // 
@@ -210,9 +212,9 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(551, 110);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(125, 26);
+            this.label8.Size = new System.Drawing.Size(143, 26);
             this.label8.TabIndex = 17;
-            this.label8.Text = "Đặt món ăn";
+            this.label8.Text = "Chọn món ăn";
             // 
             // CBB_datmonan
             // 

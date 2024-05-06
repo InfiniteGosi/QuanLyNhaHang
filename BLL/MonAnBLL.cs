@@ -64,5 +64,9 @@ namespace BLL
             }
             return "Thêm thất bại";
         }
+        public bool DeleteMonAnOfBan(string maBan)
+        {
+            return MonAnDAO.Instance.DeleteMonAnOfBan(maBan);
+        }
     }
 }

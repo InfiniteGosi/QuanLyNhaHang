@@ -99,14 +99,13 @@ insert into Ban values('B12', '', '', NULL, NULL, 0)
 insert into Ban values('B13', '', '', NULL, NULL, 0)
 insert into Ban values('B14', '', '', NULL, NULL, 0)
 insert into Ban values('B15', '', '', NULL, NULL, 0)
-select * from Ban where daCoKhachDat = 0
+select * from Ban
+
 
 
 insert into Ban_MonAn values(1, 'B01', 'M010')
 insert into Ban_MonAn values(2, 'B01', 'M001')
 insert into Ban_MonAn values(3, 'B01', 'M002')
-insert into Ban_MonAn values(1, 'B02', 'M005')
-insert into Ban_MonAn values(2, 'B02', 'M005')
 select * from Ban_MonAn
 
 
@@ -198,3 +197,16 @@ begin
 	where maBan = @maBan
 end
 go
+
+create procedure SP_HuyBan
+	@maBan VARCHAR(10)
+as
+begin
+	update Ban
+	set hoTenKhach = '',
+		soDienThoaiKhach = '',
+		ngayDatBan = NULL,
+		ngayNhanBan = NULL,
+		daCoKhachDat = 0
+	where maBan = @maBan
+end

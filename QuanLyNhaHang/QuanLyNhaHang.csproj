@@ -88,11 +88,11 @@
     <Compile Include="FormDanhSachThucDon.Designer.cs">
       <DependentUpon>FormDanhSachThucDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThongTinBan.cs">
+    <Compile Include="FormSuaBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThongTinBan.Designer.cs">
-      <DependentUpon>FormThongTinBan.cs</DependentUpon>
+    <Compile Include="FormSuaBan.Designer.cs">
+      <DependentUpon>FormSuaBan.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDatBan.cs">
       <SubType>Form</SubType>
@@ -129,8 +129,8 @@
     <EmbeddedResource Include="FormDanhSachThucDon.resx">
       <DependentUpon>FormDanhSachThucDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormThongTinBan.resx">
-      <DependentUpon>FormThongTinBan.cs</DependentUpon>
+    <EmbeddedResource Include="FormSuaBan.resx">
+      <DependentUpon>FormSuaBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDatBan.resx">
       <DependentUpon>FormDatBan.cs</DependentUpon>

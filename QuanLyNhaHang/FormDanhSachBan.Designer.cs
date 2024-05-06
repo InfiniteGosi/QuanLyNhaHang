@@ -39,10 +39,12 @@
             this.DGV_ban.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_ban.Location = new System.Drawing.Point(85, 88);
             this.DGV_ban.Name = "DGV_ban";
+            this.DGV_ban.ReadOnly = true;
             this.DGV_ban.RowHeadersWidth = 51;
             this.DGV_ban.RowTemplate.Height = 24;
             this.DGV_ban.Size = new System.Drawing.Size(898, 406);
             this.DGV_ban.TabIndex = 0;
+            this.DGV_ban.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_ban_CellDoubleClick);
             // 
             // BTN_datban
             // 

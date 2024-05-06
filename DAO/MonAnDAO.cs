@@ -20,9 +20,9 @@ namespace DAO
         private MonAnDAO() { }
         public DataTable GetListMonAnByBanID(string maBan)
         {
-            string query = "select m.* from MonAn m" +
-                           "inner join Ban_MonAn bm" +
-                           "on m.maMonAn = bm.maMonAn" +
+            string query = "select m.* from MonAn m " +
+                           "inner join Ban_MonAn bm " +
+                           "on m.maMonAn = bm.maMonAn " +
                            $"where bm.maBan = '{maBan}'";
             return DataProvider.Instance.ExecuteQuery(query);
         }
@@ -39,15 +39,17 @@ namespace DAO
         public bool AddMonAnOfBan(string maBan, List<MonAn> listMonAn)
         {
             bool error = false;
-            for (int i = 1; i <= listMonAn.Count; i++)
+            for (int i = 0; i < listMonAn.Count; i++)
             {
-                string query = $"insert into Ban_MonAn values('{i}', '{maBan}', '{listMonAn[i]}')";
-                if (DataProvider.Instance.ExecuteNonQuery(query) <= 0)
-                {
-                    error = true;
-                }
+                string query = $"insert into Ban_MonAn values('{i + 1}', '{maBan}', '{listMonAn[i].MaMonAn}')";
+                DataProvider.Instance.ExecuteNonQuery(query);
             }
             return error;
+        }
+        public bool DeleteMonAnOfBan(string maBan)
+        {
+            string query = $"delete from Ban_MonAn where maBan = '{maBan}'";
+            return DataProvider.Instance.ExecuteNonQuery(query) > 0;
         }
     }
 }

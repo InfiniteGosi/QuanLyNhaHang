@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -31,6 +32,15 @@ namespace DAO
         {
             int result = DataProvider.Instance.ExecuteStoredProcedure("SP_DatBan", parameters);
             return result > 0;
+        }
+        public DataTable GetTableById(string maBan)
+        {
+            string query = $"select * from Ban where maBan = '{maBan}'";
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+        public bool CancelTable(string maBan)
+        {
+            return DataProvider.Instance.ExecuteNonQuery($"exec SP_HuyBan {maBan}") > 0;
         }
     }
 }

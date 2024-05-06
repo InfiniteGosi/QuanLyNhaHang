@@ -61,9 +61,31 @@ namespace BLL
         {
             if (BanDAO.Instance.AddTable(parameters))
             {
-                return "Đặt bàn thành công";
+                return "Thành công";
             }
-            return "Đặt bàn thất bại";
+            return "Thất bại";
+        }
+        public Ban GetTableById(string maBan)
+        {
+            DataTable dt = BanDAO.Instance.GetTableById(maBan);
+            string hoTenKhach = dt.Rows[0]["hoTenKhach"].ToString();
+            string soDienThoaiKhach = dt.Rows[0]["soDienThoaiKhach"].ToString();
+            DateTime? ngayDatBan = dt.Rows[0]["ngayDatBan"] != DBNull.Value
+            ? (DateTime)dt.Rows[0]["ngayDatBan"]
+            : (DateTime?)null;
+            DateTime? ngayNhanBan = dt.Rows[0]["ngayNhanBan"] != DBNull.Value
+            ? (DateTime)dt.Rows[0]["ngayNhanBan"]
+            : (DateTime?)null;
+            bool daCoKhachDat = (bool)dt.Rows[0]["daCoKhachDat"];
+            return new Ban(maBan, hoTenKhach, soDienThoaiKhach, ngayDatBan, ngayNhanBan, daCoKhachDat);
+        }
+        public string CancelTable(string maBan)
+        {
+            if (BanDAO.Instance.CancelTable(maBan))
+            {
+                return "Hủy thành công";
+            }
+            return "Hủy thất bại";
         }
     }
 }

@@ -10,34 +10,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTO;
 
-
 namespace QuanLyNhaHang
 {
-    public partial class FormDatBan : Form
+    public partial class FormSuaBan : Form
     {
-        FormDanhSachBan parent;
+        private FormDanhSachBan parent;
+        private Ban ban;
         private BindingList<MonAn> listMonAn = new BindingList<MonAn>();
-        public FormDatBan(FormDanhSachBan parent)
+        public FormSuaBan(FormDanhSachBan parent, Ban ban)
         {
             InitializeComponent();
             this.parent = parent;
-        }
-        public void DisplayCBB_bantrongItems()
-        {
-            List<Ban> list = BanBLL.Instance.GetEmptyTables();
-            List<string> list_maBan = new List<string>();
-            foreach (Ban b in list)
-            {
-                list_maBan.Add(b.MaBan);
-            }
-            CBB_mabantrong.DataSource = list_maBan;
+            this.ban = ban;
         }
         private object[] values;
         private void InitializeValues()
         {
             values = new object[]
             {
-                CBB_mabantrong.SelectedItem,
+                TXB_maban.Text,
                 TXB_hotenkhach.Text,
                 TXB_sdtkhach.Text,
                 DTP_dat.Value,
@@ -58,22 +49,10 @@ namespace QuanLyNhaHang
             };
             return dict;
         }
-        private void FormDatBan_Load(object sender, EventArgs e)
-        {
-            DisplayCBB_bantrongItems();
-            CBB_mabantrong.SelectedIndex = -1;
-            CBB_datmonan.DataSource = MonAnBLL.Instance.GetListMonAn();
-        }
         
-
         private void BTN_them_Click(object sender, EventArgs e)
         {
             int error = 0;
-            if (CBB_mabantrong.SelectedIndex == -1)
-            {
-                LB_emaban.Visible = true;
-                error++;
-            }
             if (string.IsNullOrEmpty(TXB_hotenkhach.Text))
             {
                 LB_ehotenkhach.Visible = true;
@@ -95,7 +74,8 @@ namespace QuanLyNhaHang
             }
             InitializeValues();
             MessageBox.Show(BanBLL.Instance.AddTables(AddParameter()));
-            MonAnBLL.Instance.AddMonAnOfBan(CBB_mabantrong.SelectedItem.ToString(), listMonAn.ToList());
+            MonAnBLL.Instance.DeleteMonAnOfBan(TXB_maban.Text);
+            MonAnBLL.Instance.AddMonAnOfBan(TXB_maban.Text, listMonAn.ToList());
             parent.DisplayDGV_ban();
             Close();
         }
@@ -120,12 +100,38 @@ namespace QuanLyNhaHang
             DGV_monandadat.DataSource = listMonAn;
         }
 
+        private void FormSuaBan_Load(object sender, EventArgs e)
+        {
+            CBB_datmonan.DataSource = MonAnBLL.Instance.GetListMonAn();
+            TXB_maban.Text = ban.MaBan;
+            TXB_hotenkhach.Text = ban.HoTenKhach;
+            TXB_sdtkhach.Text = ban.SoDienThoaiKhach;
+            DTP_dat.Value = (DateTime)ban.NgayDatBan;
+            DTP_nhan.Value = (DateTime)ban.NgayNhanBan;
+            if (MonAnBLL.Instance.GetListMonAnByBanID(ban.MaBan) != null)
+            {
+                listMonAn = new BindingList<MonAn>(MonAnBLL.Instance.GetListMonAnByBanID(ban.MaBan));
+            }
+            DGV_monandadat.DataSource = listMonAn;
+        }
+
         private void DGV_monandadat_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.RowIndex < DGV_monandadat.Rows.Count)
             {
                 MonAn monAnToRemove = listMonAn[e.RowIndex];
                 listMonAn.Remove(monAnToRemove);
+            }
+        }
+
+        private void BTN_huy_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn hủy bàn này?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                MessageBox.Show(BanBLL.Instance.CancelTable(TXB_maban.Text));
+                parent.DisplayDGV_ban();
+                Close();
             }
         }
     }
