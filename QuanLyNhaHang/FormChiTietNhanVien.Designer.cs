@@ -44,6 +44,7 @@
             this.lbErrorMaNhanVien = new System.Windows.Forms.Label();
             this.btnResetPass = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbErrorName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TXB_manv
@@ -199,11 +200,24 @@
             this.label1.TabIndex = 16;
             this.label1.Text = "CHI TIẾT NHÂN VIÊN";
             // 
+            // lbErrorName
+            // 
+            this.lbErrorName.AutoSize = true;
+            this.lbErrorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbErrorName.ForeColor = System.Drawing.Color.Red;
+            this.lbErrorName.Location = new System.Drawing.Point(305, 316);
+            this.lbErrorName.Name = "lbErrorName";
+            this.lbErrorName.Size = new System.Drawing.Size(218, 25);
+            this.lbErrorName.TabIndex = 17;
+            this.lbErrorName.Text = "Hãy nhập tên nhân viên";
+            this.lbErrorName.Visible = false;
+            // 
             // FormChiTietNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 557);
+            this.Controls.Add(this.lbErrorName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnResetPass);
             this.Controls.Add(this.lbErrorMaNhanVien);
@@ -243,5 +257,6 @@
         private System.Windows.Forms.Label lbErrorMaNhanVien;
         private System.Windows.Forms.Button btnResetPass;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbErrorName;
     }
 }

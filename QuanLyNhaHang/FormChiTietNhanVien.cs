@@ -127,8 +127,14 @@ namespace QuanLyNhaHang
             string hoTen = tbName.Text;
             int getSex=CheckSex();
             int phanQuyen= GetNumberPosition(chucVu);
+            if (tbName.Text == "")
+            {
+                lbErrorName.Visible = true;
+                return;
+            }
             if (MessageBox.Show(string.Format("Bạn có chắc Muốn Sửa Mã nhân viên {0} không", TXB_manv.Text), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
             {
+                lbErrorName.Visible = false;
                 NhanVienDAO.Instance.UpdateStaff(maNhanVien, phanQuyen, chucVu, hoTen, getSex);
                 MessageBox.Show("Sửa thành công");
                 FormDanhSachNhanVien.DisplayDGV_nhanvien();
@@ -146,6 +152,7 @@ namespace QuanLyNhaHang
             else
             {
                 lbErrorMaNhanVien.Visible = false;
+                lbErrorName.Visible = false;
                 if (MessageBox.Show(string.Format("Bạn có chắc Muốn Xóa Mã nhân viên {0} không",TXB_manv.Text), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
                 {
                     NhanVienDAO.Instance.DeleteStaff(TXB_manv.Text);
@@ -164,21 +171,28 @@ namespace QuanLyNhaHang
         private void cbPosition_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbErrorMaNhanVien.Visible = false;
+            lbErrorName.Visible = false;
+
         }
 
         private void tbName_TextChanged(object sender, EventArgs e)
         {
             lbErrorMaNhanVien.Visible = false;
+            lbErrorName.Visible = false;
         }
 
         private void rbMale_CheckedChanged(object sender, EventArgs e)
         {
             lbErrorMaNhanVien.Visible = false;
+            lbErrorName.Visible = false;
+
         }
 
         private void rbFeMale_CheckedChanged(object sender, EventArgs e)
         {
             lbErrorMaNhanVien.Visible = false;
+            lbErrorName.Visible = false;
+
         }
 
         private void btnResetPass_Click(object sender, EventArgs e)
