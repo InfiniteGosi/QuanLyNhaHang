@@ -51,9 +51,11 @@
             // rbFeMale
             // 
             this.rbFeMale.AutoSize = true;
+            this.rbFeMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFeMale.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.rbFeMale.Location = new System.Drawing.Point(353, 346);
             this.rbFeMale.Name = "rbFeMale";
-            this.rbFeMale.Size = new System.Drawing.Size(45, 20);
+            this.rbFeMale.Size = new System.Drawing.Size(51, 24);
             this.rbFeMale.TabIndex = 23;
             this.rbFeMale.TabStop = true;
             this.rbFeMale.Text = "Nữ";
@@ -63,9 +65,11 @@
             // rbMale
             // 
             this.rbMale.AutoSize = true;
+            this.rbMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMale.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.rbMale.Location = new System.Drawing.Point(249, 343);
             this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(57, 20);
+            this.rbMale.Size = new System.Drawing.Size(65, 24);
             this.rbMale.TabIndex = 22;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Nam";
@@ -76,6 +80,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label4.Location = new System.Drawing.Point(136, 343);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 25);
@@ -94,6 +99,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Location = new System.Drawing.Point(157, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 25);
@@ -104,6 +110,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Location = new System.Drawing.Point(133, 259);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 25);
@@ -123,6 +130,7 @@
             // 
             this.LB_manv.AutoSize = true;
             this.LB_manv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_manv.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.LB_manv.Location = new System.Drawing.Point(97, 89);
             this.LB_manv.Name = "LB_manv";
             this.LB_manv.Size = new System.Drawing.Size(130, 25);
@@ -141,6 +149,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(49, 190);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 25);
@@ -232,6 +241,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label5.Location = new System.Drawing.Point(214, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(362, 46);
@@ -242,6 +252,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lbPositon);

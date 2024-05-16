@@ -48,12 +48,14 @@
             // 
             // BTN_datban
             // 
-            this.BTN_datban.Location = new System.Drawing.Point(896, 32);
+            this.BTN_datban.BackColor = System.Drawing.Color.LimeGreen;
+            this.BTN_datban.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTN_datban.Location = new System.Drawing.Point(875, 32);
             this.BTN_datban.Name = "BTN_datban";
-            this.BTN_datban.Size = new System.Drawing.Size(87, 42);
+            this.BTN_datban.Size = new System.Drawing.Size(108, 42);
             this.BTN_datban.TabIndex = 1;
             this.BTN_datban.Text = "Đặt bàn";
-            this.BTN_datban.UseVisualStyleBackColor = true;
+            this.BTN_datban.UseVisualStyleBackColor = false;
             this.BTN_datban.Click += new System.EventHandler(this.BTN_datban_Click);
             // 
             // label1
@@ -70,6 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1060, 613);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BTN_datban);

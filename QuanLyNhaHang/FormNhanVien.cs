@@ -64,7 +64,7 @@ namespace QuanLyNhaHang
         {
             if (nhanVien.PhanQuyen == 0)
             {
-                FormDanhSachMonAn f = new FormDanhSachMonAn();
+                FormDanhSachMonAn f = new FormDanhSachMonAn(nhanVien);
                 f.ShowDialog();
             }
             else if (nhanVien.PhanQuyen == 1)
@@ -74,7 +74,7 @@ namespace QuanLyNhaHang
             }
             else if (nhanVien.PhanQuyen == 2)
             {
-                FormDanhSachMonAn f = new FormDanhSachMonAn();
+                FormDanhSachMonAn f = new FormDanhSachMonAn(nhanVien);
                 f.ShowDialog();
             }
         }
@@ -83,12 +83,12 @@ namespace QuanLyNhaHang
         {
             if (nhanVien.PhanQuyen == 0)
             {
-                FormDanhSachBan f = new FormDanhSachBan();
+                FormDanhSachBan f = new FormDanhSachBan(nhanVien);
                 f.ShowDialog();
             }
             else if (nhanVien.PhanQuyen == 1)
             {
-                FormDanhSachBan f = new FormDanhSachBan();
+                FormDanhSachBan f = new FormDanhSachBan(nhanVien);
                 f.ShowDialog();
             }
             else if (nhanVien.PhanQuyen == 2)

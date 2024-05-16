@@ -55,7 +55,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(89, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(160, 26);
@@ -73,7 +75,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Location = new System.Drawing.Point(90, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 26);
@@ -83,7 +87,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Location = new System.Drawing.Point(89, 280);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(244, 26);
@@ -108,7 +114,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label4.Location = new System.Drawing.Point(89, 394);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 26);
@@ -118,7 +126,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label5.Location = new System.Drawing.Point(90, 495);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 26);
@@ -135,7 +145,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label6.Location = new System.Drawing.Point(376, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(390, 54);
@@ -144,12 +156,14 @@
             // 
             // BTN_them
             // 
+            this.BTN_them.BackColor = System.Drawing.Color.Blue;
+            this.BTN_them.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BTN_them.Location = new System.Drawing.Point(903, 598);
             this.BTN_them.Name = "BTN_them";
             this.BTN_them.Size = new System.Drawing.Size(145, 42);
             this.BTN_them.TabIndex = 11;
             this.BTN_them.Text = "Lưu";
-            this.BTN_them.UseVisualStyleBackColor = true;
+            this.BTN_them.UseVisualStyleBackColor = false;
             this.BTN_them.Click += new System.EventHandler(this.BTN_them_Click);
             // 
             // LB_ehotenkhach
@@ -191,7 +205,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label7.Location = new System.Drawing.Point(551, 180);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(261, 26);
@@ -201,7 +217,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label8.Location = new System.Drawing.Point(551, 110);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(143, 26);
@@ -218,12 +236,14 @@
             // 
             // BTN_themmonan
             // 
+            this.BTN_themmonan.BackColor = System.Drawing.Color.LimeGreen;
+            this.BTN_themmonan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BTN_themmonan.Location = new System.Drawing.Point(901, 152);
             this.BTN_themmonan.Name = "BTN_themmonan";
             this.BTN_themmonan.Size = new System.Drawing.Size(113, 32);
             this.BTN_themmonan.TabIndex = 19;
             this.BTN_themmonan.Text = "Thêm món ăn";
-            this.BTN_themmonan.UseVisualStyleBackColor = true;
+            this.BTN_themmonan.UseVisualStyleBackColor = false;
             this.BTN_themmonan.Click += new System.EventHandler(this.BTN_themmonan_Click);
             // 
             // LB_emaban
@@ -240,12 +260,14 @@
             // 
             // BTN_huy
             // 
+            this.BTN_huy.BackColor = System.Drawing.Color.Red;
+            this.BTN_huy.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BTN_huy.Location = new System.Drawing.Point(718, 598);
             this.BTN_huy.Name = "BTN_huy";
             this.BTN_huy.Size = new System.Drawing.Size(145, 42);
             this.BTN_huy.TabIndex = 21;
             this.BTN_huy.Text = "Hủy bàn";
-            this.BTN_huy.UseVisualStyleBackColor = true;
+            this.BTN_huy.UseVisualStyleBackColor = false;
             this.BTN_huy.Click += new System.EventHandler(this.BTN_huy_Click);
             // 
             // TXB_maban
@@ -260,6 +282,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1120, 664);
             this.Controls.Add(this.TXB_maban);
             this.Controls.Add(this.BTN_huy);
@@ -282,6 +305,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TXB_hotenkhach);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Name = "FormSuaBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDatBan";

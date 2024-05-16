@@ -96,7 +96,9 @@
             // lbtName
             // 
             this.lbtName.AutoSize = true;
+            this.lbtName.BackColor = System.Drawing.Color.LightSkyBlue;
             this.lbtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtName.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lbtName.Location = new System.Drawing.Point(23, 33);
             this.lbtName.Name = "lbtName";
             this.lbtName.Size = new System.Drawing.Size(117, 25);
@@ -106,7 +108,9 @@
             // lbGia
             // 
             this.lbGia.AutoSize = true;
+            this.lbGia.BackColor = System.Drawing.Color.LightSkyBlue;
             this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGia.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lbGia.Location = new System.Drawing.Point(98, 167);
             this.lbGia.Name = "lbGia";
             this.lbGia.Size = new System.Drawing.Size(42, 25);
@@ -115,19 +119,23 @@
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.LimeGreen;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnThem.Location = new System.Drawing.Point(353, 388);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(114, 50);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Xác nhận";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(249, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(304, 46);
@@ -138,10 +146,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Name = "FormThemMonAn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormThemMonAn";

@@ -40,7 +40,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Bisque;
+            this.panel1.BackColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Controls.Add(this.btnChangePass);
             this.panel1.Controls.Add(this.BTN_ban);
             this.panel1.Controls.Add(this.BTN_monan);
@@ -53,42 +53,46 @@
             // 
             // btnChangePass
             // 
+            this.btnChangePass.BackColor = System.Drawing.Color.Honeydew;
             this.btnChangePass.Location = new System.Drawing.Point(0, 460);
             this.btnChangePass.Name = "btnChangePass";
             this.btnChangePass.Size = new System.Drawing.Size(175, 78);
             this.btnChangePass.TabIndex = 1;
             this.btnChangePass.Text = "Đổi mật khẩu";
-            this.btnChangePass.UseVisualStyleBackColor = true;
+            this.btnChangePass.UseVisualStyleBackColor = false;
             this.btnChangePass.Click += new System.EventHandler(this.btnChangePass_Click);
             // 
             // BTN_ban
             // 
+            this.BTN_ban.BackColor = System.Drawing.Color.Honeydew;
             this.BTN_ban.Location = new System.Drawing.Point(0, 98);
             this.BTN_ban.Name = "BTN_ban";
             this.BTN_ban.Size = new System.Drawing.Size(178, 92);
             this.BTN_ban.TabIndex = 3;
             this.BTN_ban.Text = "Danh sách bàn";
-            this.BTN_ban.UseVisualStyleBackColor = true;
+            this.BTN_ban.UseVisualStyleBackColor = false;
             this.BTN_ban.Click += new System.EventHandler(this.BTN_ban_Click);
             // 
             // BTN_monan
             // 
+            this.BTN_monan.BackColor = System.Drawing.Color.Honeydew;
             this.BTN_monan.Location = new System.Drawing.Point(0, 196);
             this.BTN_monan.Name = "BTN_monan";
             this.BTN_monan.Size = new System.Drawing.Size(178, 92);
             this.BTN_monan.TabIndex = 2;
             this.BTN_monan.Text = "Danh sách món ăn";
-            this.BTN_monan.UseVisualStyleBackColor = true;
+            this.BTN_monan.UseVisualStyleBackColor = false;
             this.BTN_monan.Click += new System.EventHandler(this.BTN_thucdon_Click);
             // 
             // BTN_nhanvien
             // 
+            this.BTN_nhanvien.BackColor = System.Drawing.Color.Honeydew;
             this.BTN_nhanvien.Location = new System.Drawing.Point(0, 0);
             this.BTN_nhanvien.Name = "BTN_nhanvien";
             this.BTN_nhanvien.Size = new System.Drawing.Size(178, 92);
             this.BTN_nhanvien.TabIndex = 1;
             this.BTN_nhanvien.Text = "Danh sách nhân viên";
-            this.BTN_nhanvien.UseVisualStyleBackColor = true;
+            this.BTN_nhanvien.UseVisualStyleBackColor = false;
             this.BTN_nhanvien.Click += new System.EventHandler(this.BTN_nhanvien_Click);
             // 
             // BTN_dangxuat
@@ -115,6 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1116, 608);
             this.Controls.Add(this.LB_xinchao);
             this.Controls.Add(this.panel1);

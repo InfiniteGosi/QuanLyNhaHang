@@ -66,6 +66,7 @@
             // 
             this.LB_manv.AutoSize = true;
             this.LB_manv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_manv.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.LB_manv.Location = new System.Drawing.Point(304, 120);
             this.LB_manv.Name = "LB_manv";
             this.LB_manv.Size = new System.Drawing.Size(130, 25);
@@ -74,24 +75,28 @@
             // 
             // BTN_sua
             // 
+            this.BTN_sua.BackColor = System.Drawing.Color.Blue;
             this.BTN_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_sua.Location = new System.Drawing.Point(666, 483);
+            this.BTN_sua.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTN_sua.Location = new System.Drawing.Point(686, 476);
             this.BTN_sua.Name = "BTN_sua";
-            this.BTN_sua.Size = new System.Drawing.Size(114, 53);
+            this.BTN_sua.Size = new System.Drawing.Size(96, 42);
             this.BTN_sua.TabIndex = 5;
             this.BTN_sua.Text = "Sửa";
-            this.BTN_sua.UseVisualStyleBackColor = true;
+            this.BTN_sua.UseVisualStyleBackColor = false;
             this.BTN_sua.Click += new System.EventHandler(this.BTN_sua_Click);
             // 
             // BTN_xoa
             // 
+            this.BTN_xoa.BackColor = System.Drawing.Color.Red;
             this.BTN_xoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_xoa.Location = new System.Drawing.Point(814, 483);
+            this.BTN_xoa.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTN_xoa.Location = new System.Drawing.Point(821, 476);
             this.BTN_xoa.Name = "BTN_xoa";
-            this.BTN_xoa.Size = new System.Drawing.Size(114, 53);
+            this.BTN_xoa.Size = new System.Drawing.Size(91, 42);
             this.BTN_xoa.TabIndex = 6;
             this.BTN_xoa.Text = "Xóa";
-            this.BTN_xoa.UseVisualStyleBackColor = true;
+            this.BTN_xoa.UseVisualStyleBackColor = false;
             this.BTN_xoa.Click += new System.EventHandler(this.BTN_xoa_Click);
             // 
             // cbPosition
@@ -107,6 +112,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Location = new System.Drawing.Point(305, 215);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 25);
@@ -117,6 +123,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Location = new System.Drawing.Point(305, 291);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 25);
@@ -135,6 +142,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label4.Location = new System.Drawing.Point(305, 382);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 25);
@@ -145,6 +153,7 @@
             // 
             this.rbMale.AutoSize = true;
             this.rbMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbMale.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.rbMale.Location = new System.Drawing.Point(414, 382);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(74, 29);
@@ -158,6 +167,7 @@
             // 
             this.rbFeMale.AutoSize = true;
             this.rbFeMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbFeMale.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.rbFeMale.Location = new System.Drawing.Point(515, 382);
             this.rbFeMale.Name = "rbFeMale";
             this.rbFeMale.Size = new System.Drawing.Size(58, 29);
@@ -182,18 +192,20 @@
             // btnResetPass
             // 
             this.btnResetPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetPass.Location = new System.Drawing.Point(524, 483);
+            this.btnResetPass.Location = new System.Drawing.Point(515, 459);
             this.btnResetPass.Name = "btnResetPass";
-            this.btnResetPass.Size = new System.Drawing.Size(117, 53);
+            this.btnResetPass.Size = new System.Drawing.Size(125, 77);
             this.btnResetPass.TabIndex = 15;
             this.btnResetPass.Text = "Đặt lại mật khẩu";
             this.btnResetPass.UseVisualStyleBackColor = true;
+            this.btnResetPass.Visible = false;
             this.btnResetPass.Click += new System.EventHandler(this.btnResetPass_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(283, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(413, 46);
@@ -216,6 +228,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(956, 557);
             this.Controls.Add(this.lbErrorName);
             this.Controls.Add(this.label1);
@@ -232,6 +245,7 @@
             this.Controls.Add(this.BTN_sua);
             this.Controls.Add(this.LB_manv);
             this.Controls.Add(this.TXB_manv);
+            this.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.Name = "FormChiTietNhanVien";
             this.Text = "FormChiTietNhanVien";
             this.Load += new System.EventHandler(this.FormChiTietNhanVien_Load);

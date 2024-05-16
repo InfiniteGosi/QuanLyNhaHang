@@ -17,6 +17,7 @@ namespace QuanLyNhaHang
         public FormDangNhap()
         {
             InitializeComponent();
+
         }
 
         private void BTN_dangnhap_Click(object sender, EventArgs e)
@@ -67,6 +68,11 @@ namespace QuanLyNhaHang
                 TXB_mk.UseSystemPasswordChar = true;
             else
                 TXB_mk.UseSystemPasswordChar = false;
+        }
+
+        private void FormDangNhap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -109,7 +109,9 @@
             // lbtName
             // 
             this.lbtName.AutoSize = true;
+            this.lbtName.BackColor = System.Drawing.Color.LightSkyBlue;
             this.lbtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbtName.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lbtName.Location = new System.Drawing.Point(23, 105);
             this.lbtName.Name = "lbtName";
             this.lbtName.Size = new System.Drawing.Size(117, 25);
@@ -119,7 +121,9 @@
             // lbGia
             // 
             this.lbGia.AutoSize = true;
+            this.lbGia.BackColor = System.Drawing.Color.LightSkyBlue;
             this.lbGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGia.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lbGia.Location = new System.Drawing.Point(23, 171);
             this.lbGia.Name = "lbGia";
             this.lbGia.Size = new System.Drawing.Size(42, 25);
@@ -129,7 +133,9 @@
             // lbMa
             // 
             this.lbMa.AutoSize = true;
+            this.lbMa.BackColor = System.Drawing.Color.LightSkyBlue;
             this.lbMa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMa.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.lbMa.Location = new System.Drawing.Point(23, 46);
             this.lbMa.Name = "lbMa";
             this.lbMa.Size = new System.Drawing.Size(110, 25);
@@ -165,7 +171,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(225, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(355, 46);
@@ -176,6 +184,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSua);

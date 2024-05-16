@@ -14,9 +14,11 @@ namespace QuanLyNhaHang
 {
     public partial class FormDanhSachBan : Form
     {
-        public FormDanhSachBan()
+        private NhanVien nhanVien;
+        public FormDanhSachBan(NhanVien nhanVien)
         {
             InitializeComponent();
+            this.nhanVien = nhanVien;
         }
 
         private void BTN_datban_Click(object sender, EventArgs e)
@@ -32,6 +34,10 @@ namespace QuanLyNhaHang
         private void FormDanhSachBan_Load(object sender, EventArgs e)
         {
             DisplayDGV_ban();
+            if (nhanVien.PhanQuyen == 0)
+            {
+                BTN_datban.Visible = false;
+            }
         }
 
         private void DGV_ban_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
