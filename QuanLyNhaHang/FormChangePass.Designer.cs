@@ -55,7 +55,9 @@
             // LB_manv
             // 
             this.LB_manv.AutoSize = true;
+            this.LB_manv.BackColor = System.Drawing.Color.LightSkyBlue;
             this.LB_manv.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_manv.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.LB_manv.Location = new System.Drawing.Point(199, 111);
             this.LB_manv.Name = "LB_manv";
             this.LB_manv.Size = new System.Drawing.Size(117, 22);
@@ -65,7 +67,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label1.Location = new System.Drawing.Point(199, 180);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 22);
@@ -96,7 +100,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Location = new System.Drawing.Point(201, 297);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 22);
@@ -114,18 +120,22 @@
             // 
             // btnAccept
             // 
+            this.btnAccept.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnAccept.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAccept.Location = new System.Drawing.Point(318, 377);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(168, 43);
             this.btnAccept.TabIndex = 40;
             this.btnAccept.Text = "Xác nhận\r\n";
-            this.btnAccept.UseVisualStyleBackColor = true;
+            this.btnAccept.UseVisualStyleBackColor = false;
             this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.LightSkyBlue;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Location = new System.Drawing.Point(258, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(307, 46);
@@ -168,6 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BTN_show2);
             this.Controls.Add(this.BTN_show1);

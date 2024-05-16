@@ -1,5 +1,6 @@
 ﻿using BLL;
 using DAO;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,12 @@ namespace QuanLyNhaHang
 {
     public partial class FormDanhSachMonAn : Form
     {
-        public FormDanhSachMonAn()
+        private NhanVien nhanVien;
+        public FormDanhSachMonAn(NhanVien nhanVien)
         {
             InitializeComponent();
             ShowListMonAn();
+            this.nhanVien = nhanVien;
         }
         public void ShowListMonAn()
         {
@@ -42,6 +45,14 @@ namespace QuanLyNhaHang
         {
             FormThemMonAn formThemMonAn=new FormThemMonAn(this);
             formThemMonAn.ShowDialog();
+        }
+
+        private void FormDanhSachMonAn_Load(object sender, EventArgs e)
+        {
+            if (nhanVien.PhanQuyen == 0)
+            {
+                BTN_themmonan.Visible = false;
+            }
         }
     }
 }

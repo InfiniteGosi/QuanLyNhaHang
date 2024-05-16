@@ -42,11 +42,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(256, 23);
+            this.label1.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.label1.Location = new System.Drawing.Point(150, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(274, 38);
+            this.label1.Size = new System.Drawing.Size(511, 38);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Quản lý nhà hàng";
+            this.label1.Text = "Quản lý nhà hàng Hokkaido Sachi";
             // 
             // TXB_manv
             // 
@@ -67,6 +68,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label2.Location = new System.Drawing.Point(215, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 25);
@@ -77,6 +79,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label3.Location = new System.Drawing.Point(215, 234);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 25);
@@ -85,18 +88,20 @@
             // 
             // BTN_dangnhap
             // 
+            this.BTN_dangnhap.BackColor = System.Drawing.Color.LimeGreen;
             this.BTN_dangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_dangnhap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BTN_dangnhap.Location = new System.Drawing.Point(339, 358);
             this.BTN_dangnhap.Name = "BTN_dangnhap";
             this.BTN_dangnhap.Size = new System.Drawing.Size(154, 67);
             this.BTN_dangnhap.TabIndex = 5;
             this.BTN_dangnhap.Text = "Đăng Nhập";
-            this.BTN_dangnhap.UseVisualStyleBackColor = true;
+            this.BTN_dangnhap.UseVisualStyleBackColor = false;
             this.BTN_dangnhap.Click += new System.EventHandler(this.BTN_dangnhap_Click);
             // 
             // BTN_show
             // 
-            this.BTN_show.BackColor = System.Drawing.Color.LightGray;
+            this.BTN_show.BackColor = System.Drawing.Color.LightSkyBlue;
             this.BTN_show.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.BTN_show.FlatAppearance.BorderSize = 0;
             this.BTN_show.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -114,6 +119,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BTN_show);
             this.Controls.Add(this.BTN_dangnhap);
@@ -126,6 +132,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormDangNhap";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDangNhap_FormClosing);
+            this.Load += new System.EventHandler(this.FormDangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

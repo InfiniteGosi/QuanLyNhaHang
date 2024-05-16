@@ -30,6 +30,7 @@
         {
             this.DGV_nhanvien = new System.Windows.Forms.DataGridView();
             this.BTN_themnv = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_nhanvien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -38,7 +39,7 @@
             this.DGV_nhanvien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_nhanvien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DGV_nhanvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_nhanvien.Location = new System.Drawing.Point(77, 73);
+            this.DGV_nhanvien.Location = new System.Drawing.Point(68, 135);
             this.DGV_nhanvien.Name = "DGV_nhanvien";
             this.DGV_nhanvien.ReadOnly = true;
             this.DGV_nhanvien.RowHeadersWidth = 51;
@@ -49,19 +50,33 @@
             // 
             // BTN_themnv
             // 
-            this.BTN_themnv.Location = new System.Drawing.Point(822, 12);
+            this.BTN_themnv.BackColor = System.Drawing.Color.LimeGreen;
+            this.BTN_themnv.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTN_themnv.Location = new System.Drawing.Point(879, 65);
             this.BTN_themnv.Name = "BTN_themnv";
-            this.BTN_themnv.Size = new System.Drawing.Size(129, 55);
+            this.BTN_themnv.Size = new System.Drawing.Size(116, 44);
             this.BTN_themnv.TabIndex = 1;
             this.BTN_themnv.Text = "Thêm nhân viên";
-            this.BTN_themnv.UseVisualStyleBackColor = true;
+            this.BTN_themnv.UseVisualStyleBackColor = false;
             this.BTN_themnv.Click += new System.EventHandler(this.BTN_themnv_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(63, 83);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(270, 26);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "DANH SÁCH NHÂN VIÊN";
             // 
             // FormDanhSachNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(1060, 613);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BTN_themnv);
             this.Controls.Add(this.DGV_nhanvien);
             this.Name = "FormDanhSachNhanVien";
@@ -70,6 +85,7 @@
             this.Load += new System.EventHandler(this.FormDanhSachNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_nhanvien)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -77,5 +93,6 @@
 
         private System.Windows.Forms.DataGridView DGV_nhanvien;
         private System.Windows.Forms.Button BTN_themnv;
+        private System.Windows.Forms.Label label1;
     }
 }
